@@ -6,7 +6,7 @@ Some features & code had to be removed for security/privacy reasons.
 
 Fire Relay uses Software Defined Radio and Google Speech-to-Text API to generate leads
 in the restoration contracting industry. Remote PCs equipped with SDR radios and
-off-the shelf software record radio transmissions on Fire and EMS channels, then upload
+off-the-shelf software record radio transmissions on Fire and EMS channels, then upload
 the clips to a central server. When the server detects a new file, it sends the file 
 to Google for transcription. When the response arrives, the transcription is searched
 for keywords, email alerts are sent if necessary, the transcription and metadata are 
