@@ -1,0 +1,183 @@
+<html>
+
+	<head>
+	
+		<title>Fire Relay Master Feed</title>
+	
+		<link rel="stylesheet" href="style.css">
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	
+	</head>
+	
+	<body>
+	
+		<center>
+		
+			<!--Logo & Title-->
+			<br>
+			<img src="/img/logo.png">
+			<br>
+			<h2>Fire Relay Master Feed</h2>
+			
+			<!--App Container Table-->			
+			<table id="appContainer">
+			
+				<!--Metadata Container row-->
+				<tr>
+				
+					<td id="metadataContainer">
+					
+						<center>
+						
+						<table id="metadata">
+				
+							<br>
+							
+							<center>
+						
+							<tr>
+							
+								<td width="70%"><center>Time</td>
+								
+								<!--Audio Player-->
+								<td rowspan="4">
+									<audio id="player" controls width="250px" src=""> </audio>
+								</td>
+								
+							</tr>
+							
+							<tr>
+							
+								<td><center>Talkgroup</td>
+								
+							</tr>
+							
+							<tr>
+							
+								<td><center>Description</td>
+								
+							</tr>
+							
+							</center>
+							
+						</table>
+						
+						<br>
+						
+						</center>
+					
+					</td>
+					
+				</tr>
+				
+				<!--Control Row-->
+				<tr>
+				
+					<td id="buttonContainer">	
+
+						<center>
+						
+						<!--Legth Selection Dropdown-->
+						<select name="feed_length_selection" id="feedLengthSelection" class="dropdown">
+							<option value="100">Most Recent 100 Transmissions</option>
+							<option value="250">Most Recent 250 Transmissions</option>
+							<option value="500">Most Recent 500 Transmissions</option>
+							<option value="1000">Most Recent 1000 Transmissions</option>
+							<option value="2000">Most Recent 2000 Transmissions</option>
+							<option value="ALL">All Transmissions</option>
+							
+						</select>
+						
+						<!--Sort Selection Dropdown-->
+						<select name="feed_sort_selection" id="feedSortSelection" class="dropdown">
+						
+							<option value="Time">Sort by Time</option>
+							<option value="County">Sort by County</option>
+							<option value="Talkgroup">Sort by Talkgroup</option>
+							<option value="Flag">Sort by Flag</option>
+							
+						</select>
+						
+						<!--Autoplay Direction Dropdown-->
+						<select name="autoplay_direction" id="autoplayDirection" class="dropdown">
+						
+							<option value="Backward">Autoplay Backward</option>
+							<option value="Forward">Autoplay Forward</option>
+							<option value="None">Disable Autoplay</option>
+							
+						</select>
+						
+						<!--Sort Feed Button-->
+						<button class="button" onclick="updateFeed()">Update</button>
+						
+						</center>
+						
+					</td>
+					
+				</tr>
+				
+				<!--Feed Container Row-->
+				<tr>
+				
+					<td id="feedContainer">
+					
+						<center>
+						
+							<!--Feed Table Key-->
+							<table id="feedTableKey" width="100%">	
+								
+								<tr>
+								
+									<th width="7%">Time</th>
+									<th width="3%">County</th>
+									<th width="15%">Talkgroup</th>
+									<th width="70%">Transcript</th>
+									<th width="5%">Flag</th>
+									<th width="5%" style="display:none;"></th>
+									
+								</tr>			
+								
+							</table>
+							
+							<!--Feed Divider-->							
+							<div id="feedDivider">
+								
+								<table id="feedTable">	
+								
+									<center>
+									
+										<tr>
+										
+											<th width="7%"></th>
+											<th width="3%"></th>
+											<th width="15%"></th>
+											<th width="65%"></th>
+											<th width="5%"></th>
+											<th width="5%" style="display:none;"></th>
+											
+										</tr>			
+									
+									</center>
+									
+								</table>
+								
+								<br>
+								
+							</div>
+						
+						</center>
+					
+					</td>
+					
+				</tr>
+			
+			</table>
+		
+		</center>
+	
+	</body>
+	
+</html>
+
+<script src="script.js"></script>
